@@ -3,6 +3,7 @@ import FolderLayout from "./components/FolderLayout";
 import Library from "./pages/Library";
 import PlaceholderPage from "./pages/PlaceholderPage";
 import GameDetail from "./pages/GameDetail";
+import Comments from "./pages/Comments";
 import "./App.css";
 
 function App() {
@@ -15,10 +16,7 @@ function App() {
           <Route path="/home" element={<PlaceholderPage title="HOME" />} />
           <Route path="/library" element={<Library />} />
           <Route path="/library/:id" element={<GameDetail />} />
-          <Route
-            path="/comments"
-            element={<PlaceholderPage title="COMMENTS" />}
-          />
+          <Route path="/comments" element={<Comments />} />{" "}
           <Route
             path="/profile"
             element={<PlaceholderPage title="PROFILE" />}
