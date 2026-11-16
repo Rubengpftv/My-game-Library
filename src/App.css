@@ -1201,3 +1201,726 @@
     grid-template-columns: 1fr;
   }
 }
+
+/* ==========================
+   HOME - SIN SESIÓN
+========================== */
+
+.home-page {
+  width: 100%;
+  min-height: 70vh;
+  display: grid;
+  grid-template-columns: 1fr 1px 1fr;
+  align-items: center;
+  padding: 40px;
+  box-sizing: border-box;
+  color: #d8c5a5;
+}
+
+.home-form-section,
+.home-logo-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 0;
+}
+
+.home-form-container {
+  width: 100%;
+  max-width: 380px;
+}
+
+.home-form-container h1 {
+  margin-bottom: 35px;
+}
+
+.home-form-container form {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+.home-form-container label {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.home-form-container input {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 10px;
+}
+
+.home-form-container button {
+  padding: 10px 16px;
+  cursor: pointer;
+}
+
+.home-divider {
+  width: 1px;
+  height: 350px;
+  background-color: #8b795e;
+  opacity: 0.6;
+}
+
+.home-logo-section img {
+  display: block;
+  width: 100%;
+  max-width: 420px;
+  max-height: 420px;
+  height: auto;
+  object-fit: contain;
+}
+
+.home-switch-form {
+  margin-top: 25px;
+}
+
+.home-switch-form button {
+  margin-left: 8px;
+}
+
+.home-error {
+  color: #d46b5e;
+}
+
+/* ==========================
+   HOME - CON SESIÓN
+========================== */
+
+.home-authenticated {
+  min-height: 75vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+  box-sizing: border-box;
+}
+
+.home-authenticated img {
+  display: block;
+  width: 100%;
+  max-width: 520px;
+  max-height: 520px;
+  height: auto;
+  object-fit: contain;
+}
+
+/* ==========================
+   CABECERA CON LOGO
+========================== */
+
+.folder-brand {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.folder-brand img {
+  display: block;
+  width: 75px;
+  height: 75px;
+  object-fit: contain;
+}
+
+.folder-brand p {
+  margin: 0;
+}
+
+/* ==========================
+   USUARIO Y LOGOUT
+========================== */
+
+.folder-user {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+/* ==========================
+   RESPONSIVE
+========================== */
+
+@media (max-width: 700px) {
+  .home-page {
+    grid-template-columns: 1fr;
+    gap: 30px;
+    padding: 25px 15px;
+  }
+
+  .home-divider {
+    width: 80%;
+    height: 1px;
+    justify-self: center;
+  }
+
+  .home-logo-section img {
+    max-width: 260px;
+    max-height: 260px;
+  }
+
+  .home-authenticated img {
+    max-width: 320px;
+  }
+
+  .folder-brand img {
+    width: 55px;
+    height: 55px;
+  }
+
+  .folder-user {
+    flex-wrap: wrap;
+  }
+}
+
+/* =================================
+   PORTADA DE LA CARPETA - HOME
+================================= */
+
+.folder-cover {
+  width: 100%;
+  min-height: 480px;
+  box-sizing: border-box;
+  padding: 45px;
+  background: transparent;
+  display: flex;
+  align-items: center;
+}
+
+/* Distribución de formulario y logo */
+
+.home-cover-content {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1px 1fr;
+  align-items: center;
+  gap: 40px;
+}
+
+/* Formulario */
+
+.home-cover-form {
+  display: flex;
+  justify-content: center;
+  min-width: 0;
+}
+
+.home-form-container {
+  width: 100%;
+  max-width: 380px;
+}
+
+.home-form-container h1 {
+  margin-top: 0;
+  margin-bottom: 30px;
+}
+
+.home-form-container form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.home-form-container label {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.home-form-container input {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 10px;
+}
+
+.home-form-container button {
+  padding: 10px 16px;
+  cursor: pointer;
+}
+
+.home-switch-form {
+  margin-top: 25px;
+}
+
+.home-switch-form button {
+  margin-left: 8px;
+  cursor: pointer;
+}
+
+.home-error {
+  color: #a33b30;
+}
+
+/* Separador central */
+
+.home-cover-divider {
+  width: 1px;
+  height: 320px;
+  background-color: #806c4c;
+  opacity: 0.65;
+}
+
+/* Logo */
+
+.home-cover-logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 0;
+}
+
+.home-cover-logo img {
+  display: block;
+  width: 100%;
+  max-width: 400px;
+  max-height: 400px;
+  object-fit: contain;
+}
+
+/* HOME cuando hay sesión */
+
+.home-cover-authenticated {
+  grid-template-columns: 1fr;
+}
+
+.home-cover-authenticated .home-cover-form,
+.home-cover-authenticated .home-cover-divider {
+  display: none;
+}
+
+.home-cover-authenticated .home-cover-logo img {
+  max-width: 480px;
+  max-height: 480px;
+}
+
+/* Pestañas desactivadas */
+
+.folder-tab-disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+/* Cabecera con logo */
+
+.folder-brand {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.folder-brand img {
+  width: 75px;
+  height: 75px;
+  object-fit: contain;
+}
+
+.folder-brand p {
+  margin: 0;
+}
+
+.folder-user {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+/* Responsive */
+
+@media (max-width: 700px) {
+  .folder-cover {
+    padding: 25px 15px;
+  }
+
+  .home-cover-content {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+
+  .home-cover-divider {
+    width: 80%;
+    height: 1px;
+    justify-self: center;
+  }
+
+  .home-cover-logo img {
+    max-width: 250px;
+    max-height: 250px;
+  }
+
+  .home-cover-authenticated .home-cover-logo img {
+    max-width: 300px;
+    max-height: 300px;
+  }
+
+  .folder-brand img {
+    width: 55px;
+    height: 55px;
+  }
+
+  .folder-user {
+    flex-wrap: wrap;
+  }
+}
+
+/* La carpeta ocupa toda la altura de la ventana */
+
+.folder {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+
+/* HOME ocupa todo el espacio disponible */
+
+.folder-cover {
+  flex: 1;
+  min-height: 0;
+  display: flex;
+  align-items: stretch;
+  box-sizing: border-box;
+}
+
+/* El contenido también ocupa toda la altura */
+
+.home-cover-content {
+  flex: 1;
+  min-height: 100%;
+  align-self: stretch;
+}
+
+/* El pie queda al final de la carpeta */
+
+.folder-footer {
+  margin-top: auto;
+  flex-shrink: 0;
+}
+
+/* Botones de la portada */
+
+.home-form-container form > button {
+  background-color: #172638;
+  color: #e8d5b5;
+  border: 2px solid #c5a978;
+  padding: 12px 20px;
+  font-family: inherit;
+  font-weight: bold;
+  letter-spacing: 1.5px;
+  cursor: pointer;
+  transition:
+    background-color 0.2s,
+    color 0.2s;
+}
+
+.home-form-container form > button:hover {
+  background-color: #293e55;
+  color: #fff2dc;
+}
+
+.home-form-container form > button:active {
+  background-color: #0e1926;
+}
+
+/* Botón para cambiar entre LOGIN y REGISTER */
+
+.home-switch-form button {
+  background: transparent;
+  color: #172638;
+  border: none;
+  border-bottom: 1px solid #172638;
+  padding: 4px 2px;
+  font-family: inherit;
+  font-weight: bold;
+  letter-spacing: 1px;
+  cursor: pointer;
+}
+
+.home-switch-form button:hover {
+  color: #76532e;
+  border-bottom-color: #76532e;
+}
+
+/* Campos del formulario */
+
+.home-form-container input {
+  background-color: #f3e9d7;
+  color: #30271e;
+  border: 1px solid #887452;
+  padding: 10px;
+  font-family: inherit;
+}
+
+.home-form-container input:focus {
+  outline: 2px solid #172638;
+  outline-offset: 2px;
+}
+
+/* =================================
+   RATINGS - COLLECTION RANKINGS
+================================= */
+
+.ratings-page {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  width: 100%;
+  box-sizing: border-box;
+  color: #382e24;
+}
+
+.ratings-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+  border-bottom: 2px solid #8b795e;
+  padding-bottom: 15px;
+}
+
+.ratings-header h2,
+.ratings-category-heading h2 {
+  margin: 0;
+  letter-spacing: 1.5px;
+}
+
+.ratings-header p {
+  margin: 6px 0 0;
+  font-size: 12px;
+}
+
+.ratings-file-code,
+.ratings-category-heading span {
+  font-size: 10px;
+  letter-spacing: 1px;
+}
+
+.ratings-overview {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.rating-overview-card {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 15px;
+  border: 1px solid #b7a582;
+  background: #eee4d1;
+  min-width: 0;
+}
+
+.rating-overview-card span,
+.rating-overview-card small {
+  font-size: 10px;
+  letter-spacing: 1px;
+}
+
+.rating-overview-card strong {
+  font-size: 25px;
+  overflow-wrap: anywhere;
+}
+
+.ratings-category-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  border-bottom: 2px solid #8b795e;
+  padding-bottom: 9px;
+  margin-top: 10px;
+}
+
+.ratings-category-heading h2 {
+  font-size: 17px;
+}
+
+.ratings-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.rating-ranking {
+  border: 1px solid #b7a582;
+  background: #f3eadb;
+  padding: 16px;
+  min-width: 0;
+}
+
+.rating-section-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 10px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #b7a582;
+}
+
+.rating-section-heading h3 {
+  margin: 0;
+  font-size: 14px;
+  letter-spacing: 1px;
+}
+
+.rating-section-heading p {
+  margin: 5px 0 0;
+  font-size: 10px;
+  opacity: 0.75;
+}
+
+.rating-section-heading > span {
+  font-size: 9px;
+  white-space: nowrap;
+}
+
+.rating-ranking-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.rating-ranking-list li {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 11px 0;
+  border-bottom: 1px dashed #c5b89e;
+  min-width: 0;
+}
+
+.rating-rank-number {
+  font-family: monospace;
+  font-size: 17px;
+  font-weight: bold;
+  color: #756044;
+  min-width: 24px;
+}
+
+.rating-game-name {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-width: 0;
+  color: #382e24;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 12px;
+}
+
+.rating-game-name:hover {
+  color: #172638;
+  text-decoration: underline;
+}
+
+.rating-game-name small {
+  margin-top: 4px;
+  font-weight: normal;
+  font-size: 10px;
+  opacity: 0.7;
+}
+
+.rating-ranking-list li > strong {
+  font-family: monospace;
+  font-size: 12px;
+  white-space: nowrap;
+}
+
+.rating-expand-button {
+  display: block;
+  width: 100%;
+  margin-top: 12px;
+  padding: 9px;
+  background: #172638;
+  color: #e8d5b5;
+  border: 1px solid #b7a582;
+  font-weight: bold;
+  font-size: 10px;
+  letter-spacing: 1px;
+  cursor: pointer;
+}
+
+.rating-expand-button:hover {
+  background: #293e55;
+}
+
+.rating-empty {
+  font-size: 12px;
+  opacity: 0.7;
+  padding: 12px 0;
+}
+
+.ratings-footer {
+  border-top: 1px solid #8b795e;
+  padding-top: 12px;
+  font-size: 10px;
+  letter-spacing: 0.8px;
+  opacity: 0.75;
+}
+
+.ratings-footer p {
+  margin: 5px 0;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 850px) {
+  .ratings-overview {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 600px) {
+  .ratings-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .ratings-header {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .ratings-category-heading {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .rating-ranking {
+    padding: 12px;
+  }
+}
+/* Scroll interno de los rankings desplegados */
+
+.rating-ranking-list {
+  max-height: 280px;
+  overflow-y: auto;
+  padding-right: 8px;
+}
+
+/* Barra de desplazamiento */
+
+.rating-ranking-list::-webkit-scrollbar {
+  width: 6px;
+}
+
+.rating-ranking-list::-webkit-scrollbar-track {
+  background: #e5dac6;
+}
+
+.rating-ranking-list::-webkit-scrollbar-thumb {
+  background: #8b795e;
+  border-radius: 3px;
+}
+
+.rating-ranking-list::-webkit-scrollbar-thumb:hover {
+  background: #172638;
+}
+
+/* Firefox */
+
+.rating-ranking-list {
+  scrollbar-width: thin;
+  scrollbar-color: #8b795e #e5dac6;
+}
