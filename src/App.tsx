@@ -2,6 +2,7 @@ import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
 import FolderLayout from "./components/FolderLayout";
 import Library from "./pages/Library";
 import PlaceholderPage from "./pages/PlaceholderPage";
+import GameDetail from "./pages/GameDetail";
 import "./App.css";
 
 function App() {
@@ -13,6 +14,7 @@ function App() {
         <Route element={<FolderLayout />}>
           <Route path="/home" element={<PlaceholderPage title="HOME" />} />
           <Route path="/library" element={<Library />} />
+          <Route path="/library/:id" element={<GameDetail />} />
           <Route
             path="/comments"
             element={<PlaceholderPage title="COMMENTS" />}
