@@ -1099,3 +1099,105 @@
 .profile-completed-details[open] .profile-game-list {
   margin-top: 8px;
 }
+
+/* STATISTICS */
+
+.statistics-page {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-height: 0;
+  gap: 12px;
+}
+
+.statistics-heading h2 {
+  margin: 0 0 5px;
+  font-size: 25px;
+}
+
+.statistics-heading p {
+  margin: 0;
+  font-size: 11px;
+}
+
+/* INDICADORES PRINCIPALES */
+
+.statistics-overview {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.statistics-card {
+  border: 1px solid #c5b99f;
+  background: rgba(255, 255, 255, 0.25);
+  padding: 13px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.statistics-card span {
+  font-size: 9px;
+  line-height: 1.4;
+}
+
+.statistics-card strong {
+  font-size: 24px;
+}
+
+/* BLOQUES DE INFORMACIÓN */
+
+.statistics-details {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-content: start;
+  gap: 12px;
+  flex: 1;
+  min-height: 0;
+  overflow-y: auto;
+}
+
+.statistics-container {
+  min-width: 0;
+  padding: 14px;
+  border: 1px solid #c5b99f;
+  background: rgba(255, 255, 255, 0.2);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.statistics-container h3 {
+  margin: 0 0 5px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #c5b99f;
+  font-size: 11px;
+  letter-spacing: 0.7px;
+}
+
+.statistics-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  font-size: 11px;
+}
+
+.statistics-row strong {
+  font-size: 13px;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 900px) {
+  .statistics-overview {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 600px) {
+  .statistics-details {
+    grid-template-columns: 1fr;
+  }
+}
