@@ -4,6 +4,7 @@ import Library from "./pages/Library";
 import PlaceholderPage from "./pages/PlaceholderPage";
 import GameDetail from "./pages/GameDetail";
 import Comments from "./pages/Comments";
+import ProfilePage from "./pages/Profile";
 import "./App.css";
 
 function App() {
@@ -17,10 +18,7 @@ function App() {
           <Route path="/library" element={<Library />} />
           <Route path="/library/:id" element={<GameDetail />} />
           <Route path="/comments" element={<Comments />} />{" "}
-          <Route
-            path="/profile"
-            element={<PlaceholderPage title="PROFILE" />}
-          />
+          <Route path="/profile" element={<ProfilePage />} />{" "}
           <Route
             path="/statistics"
             element={<PlaceholderPage title="STATISTICS" />}
